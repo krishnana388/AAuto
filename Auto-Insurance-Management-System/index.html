@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoInsure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e3f2fd, #fff);
+        }
+        .navbar {
+            background: linear-gradient(to right, #0d6efd, #6610f2);
+        }
+        .navbar-brand, .navbar-nav .nav-link, .dropdown-menu a {
+            color: #fff !important;
+        }
+        .dropdown-menu {
+            background-color: #f8f9fa;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        .footer {
+            background: #343a40;
+            color: #fff;
+        }
+        .footer a {
+            color: #ccc;
+        }
+        .footer a:hover {
+            color: #fff;
+        }
+        .sub-heading1 {
+            font-style: italic;
+            color: #6c757d;
+        }
+        .video-wrapper iframe {
+            width: 100%;
+            max-width: 550px;
+            height: 300px;
+        }
+        .topic {
+            font-weight: 600;
+            color: #0d6efd;
+        }
+    </style>
+</head>
+<body>
+    <header class="py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.png" alt="AutoInsure Logo" height="30" class="me-2">
+                    AutoInsure
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Login
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="User/User-login.html">User</a></li>
+                                <li><a class="dropdown-item" href="Agent/AgentIndex.html">Agent</a></li>
+                                <li><a class="dropdown-item" href="Admin/AdminIndex.html">Admin</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="User/register.html">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../images/discount.jpg" class="d-block w-100" style="height: 450px; object-fit: cover;" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/bike_ins.avif" class="d-block w-100" style="height: 450px; object-fit: cover;" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/auto_ins.jfif" class="d-block w-100" style="height: 450px; object-fit: cover;" alt="Slide 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="container mt-5">
+            <h1 class="text-primary">The #1 Rated Insurance</h1>
+            <p class="sub-heading1">Get a quote in the blink of an eye</p>
+            <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
+                <div class="col">
+                    <div class="card h-100 text-center">
+                        <img src="images/car.jfif" class="card-img-top p-3" style="max-height: 150px; object-fit: contain;" alt="Car">
+                        <div class="card-body">
+                            <h5 class="card-title">Car</h5>
+                            <a href="register.html" class="btn btn-outline-primary">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center">
+                        <img src="images/bike.jfif" class="card-img-top p-3" style="max-height: 150px; object-fit: contain;" alt="Bike">
+                        <div class="card-body">
+                            <h5 class="card-title">Motorcycle</h5>
+                            <a href="register.html?topic=motorcycle" class="btn btn-outline-primary">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center">
+                        <img src="images/auto.jfif" class="card-img-top p-3" style="max-height: 150px; object-fit: contain;" alt="Three-Wheel">
+                        <div class="card-body">
+                            <h5 class="card-title">Three Wheel</h5>
+                            <a href="register.html?topic=three-wheeler" class="btn btn-outline-primary">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center">
+                        <img src="images/truck.avif" class="card-img-top p-3" style="max-height: 150px; object-fit: contain;" alt="Truck">
+                        <div class="card-body">
+                            <h5 class="card-title">Commercial Vehicle</h5>
+                            <a href="register.html?topic=commercial-vehicle" class="btn btn-outline-primary">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="images/accident.jfif" class="img-fluid rounded" alt="Accident">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="topic">Get Instant Access to Claims and Your Policy</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="login.html" class="text-decoration-none text-dark"><i class="fa fa-chevron-right me-2"></i>Log In to Your Policy</a></li>
+                        <li><a href="#selectCategory" class="text-decoration-none text-dark"><i class="fa fa-chevron-right me-2"></i>Register New Vehicle</a></li>
+                        <li><a href="renew.html" class="text-decoration-none text-dark"><i class="fa fa-chevron-right me-2"></i>Renew Policy</a></li>
+                        <li><a href="claim.php" class="text-decoration-none text-dark"><i class="fa fa-chevron-right me-2"></i>Report a Claim</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>15 Defensive Driving Secrets That Can Save Your Life...</h2>
+                    <p>Defensive driving secrets are valuable tips and techniques that enable drivers to stay safe on the road. These include keeping a safe distance, checking mirrors, anticipating hazards, and staying calm under pressure.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/UnqOmbR2qNs" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>AutoInsure</h5>
+                    <p>Your trusted partner for automobile insurance.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fa fa-map-marker-alt me-2"></i>123 Siruseri, Chennai, TN</p>
+                    <p><i class="fa fa-phone me-2"></i>+91 XXXXXXXXXX</p>
+                    <p><i class="fa fa-envelope me-2"></i>info@autoinsure.com</p>
+                </div>
+            </div>
+            <hr class="my-3">
+            <p class="text-center mb-0">&copy; 2025 AutoInsure. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
